@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: shockk73-online-tls
+spec:
+  secretName: shockk73-online
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: shockk73.online
+  dnsNames:
+    - shockk73.online
+    - www.shockk73.online
